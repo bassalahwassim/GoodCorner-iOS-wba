@@ -10,5 +10,6 @@ final class DraftEntity: NSManagedObject {
     @NSManaged var priceText: String
     @NSManaged var categoryID: NSNumber?
     @NSManaged var isUrgent: Bool
+    @NSManaged var imageData: Data?
     @NSManaged var updatedAt: Date
 }

@@ -28,3 +28,9 @@
 "draft.discard.confirm" = "Discard this draft?";
 "draft.close" = "Close";
 "draft.autosave.note" = "Your draft is saved automatically on this device.";
+"draft.photo.header" = "Photo";
+"draft.photo.add" = "Add a photo";
+"draft.photo.change" = "Change photo";
+"draft.photo.remove" = "Remove photo";
+"draft.photo.preview" = "Selected photo";
+"draft.photo.error" = "This photo could not be loaded.";

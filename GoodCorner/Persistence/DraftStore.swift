@@ -22,7 +22,8 @@ final class CoreDataDraftStore: DraftStore {
                 description: entity.descriptionText,
                 priceText: entity.priceText,
                 categoryID: entity.categoryID?.intValue,
-                isUrgent: entity.isUrgent
+                isUrgent: entity.isUrgent,
+                imageData: entity.imageData
             )
         }
     }
@@ -41,6 +42,7 @@ final class CoreDataDraftStore: DraftStore {
             entity.priceText = draft.priceText
             entity.categoryID = draft.categoryID.map { NSNumber(value: $0) }
             entity.isUrgent = draft.isUrgent
+            entity.imageData = draft.imageData
             entity.updatedAt = Date()
             try context.save()
         }

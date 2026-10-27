@@ -40,6 +40,25 @@ final class DraftViewModel: ObservableObject {
         }
     }
 
+    /// Redimensionne la photo choisie hors du thread principal, puis l'ajoute au brouillon.
+    @MainActor
+    func attachPhoto(rawData: Data) async {
+        let processed = await Task.detached(priority: .userInitiated) {
+            ImageProcessor.jpegData(from: rawData)
+        }.value
+
+        if let processed {
+            draft.imageData = processed
+            errorMessage = nil
+        } else {
+            errorMessage = NSLocalizedString("draft.photo.error", comment: "")
+        }
+    }
+
+    func removePhoto() {
+        draft.imageData = nil
+    }
+
     /// Vide le formulaire (il reste ouvert) et supprime la copie persistée.
     func reset() {
         draft = ListingDraft()

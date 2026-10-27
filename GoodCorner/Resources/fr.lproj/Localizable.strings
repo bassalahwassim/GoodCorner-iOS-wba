@@ -28,3 +28,9 @@
 "draft.discard.confirm" = "Supprimer ce brouillon ?";
 "draft.close" = "Fermer";
 "draft.autosave.note" = "Votre brouillon est enregistré automatiquement sur cet appareil.";
+"draft.photo.header" = "Photo";
+"draft.photo.add" = "Ajouter une photo";
+"draft.photo.change" = "Changer la photo";
+"draft.photo.remove" = "Supprimer la photo";
+"draft.photo.preview" = "Photo sélectionnée";
+"draft.photo.error" = "Impossible de charger cette photo.";
