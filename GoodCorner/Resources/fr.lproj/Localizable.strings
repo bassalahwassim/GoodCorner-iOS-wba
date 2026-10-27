@@ -15,3 +15,16 @@
 "error.server" = "Le serveur a renvoyé une erreur (%d).";
 "error.decoding" = "Les données reçues sont illisibles.";
 "error.invalid" = "Réponse du serveur invalide.";
+"draft.open" = "Brouillon d'annonce";
+"draft.title" = "Nouvelle annonce";
+"draft.field.title" = "Titre";
+"draft.field.price" = "Prix (€)";
+"draft.field.category" = "Catégorie";
+"draft.field.none" = "Aucune";
+"draft.field.urgent" = "Urgent";
+"draft.field.description" = "Description";
+"draft.reset" = "Réinitialiser le formulaire";
+"draft.discard" = "Supprimer le brouillon";
+"draft.discard.confirm" = "Supprimer ce brouillon ?";
+"draft.close" = "Fermer";
+"draft.autosave.note" = "Votre brouillon est enregistré automatiquement sur cet appareil.";
