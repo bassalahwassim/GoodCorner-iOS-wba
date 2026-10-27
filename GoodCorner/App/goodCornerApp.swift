@@ -4,7 +4,7 @@ import SwiftUI
 struct goodCornerApp: App {
     var body: some Scene {
         WindowGroup {
-            ListingsView()
+			RootView()
         }
     }
 }
