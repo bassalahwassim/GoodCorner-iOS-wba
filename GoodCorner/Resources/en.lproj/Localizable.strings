@@ -1,0 +1,17 @@
+"list.title" = "Listings";
+"filter.all" = "All";
+"state.loading" = "Loading…";
+"state.error.title" = "Something went wrong";
+"state.retry" = "Retry";
+"state.empty.title" = "No listings";
+"state.empty.message" = "There are no listings to show.";
+"badge.urgent" = "Urgent";
+"detail.title" = "Details";
+"detail.category" = "Category";
+"detail.published" = "Published";
+"detail.description" = "Description";
+"category.unknown" = "Other";
+"error.network" = "Unable to reach the server. Check your connection and try again.";
+"error.server" = "The server returned an error (%d).";
+"error.decoding" = "The data received could not be read.";
+"error.invalid" = "Invalid server response.";
