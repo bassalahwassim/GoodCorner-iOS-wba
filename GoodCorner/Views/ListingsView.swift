@@ -19,6 +19,11 @@ struct ListingsView: View {
         NavigationStack {
             content
                 .navigationTitle("list.title")
+                .searchable(
+                    text: $viewModel.searchText,
+                    placement: .navigationBarDrawer(displayMode: .always),
+                    prompt: Text("search.prompt")
+                )
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {
@@ -76,13 +81,23 @@ struct ListingsView: View {
                     categories: viewModel.categories,
                     selectedID: $viewModel.selectedCategoryID
                 )
+				if viewModel.isUpdating {
+					HStack(spacing: 8) {
+						ProgressView()
+						Text("search.loading")
+							.font(.subheadline)
+							.foregroundColor(.secondary)
+					}
+					.padding(.vertical, 8)
+					.frame(maxWidth: .infinity)
+					.accessibilityElement(children: .combine)
+				}
                 if viewModel.filteredListings.isEmpty {
-                    MessageStateView(
-                        systemImage: "tray",
-                        title: "state.empty.title",
-                        message: NSLocalizedString("state.empty.message", comment: ""),
-                        retryAction: nil
-                    )
+                    if viewModel.isUpdating {
+                        Spacer()
+                    } else {
+                        emptyState
+                    }
                 } else {
                     List(viewModel.filteredListings) { listing in
                         NavigationLink {
@@ -101,6 +116,26 @@ struct ListingsView: View {
                     .refreshable { await viewModel.load() }
                 }
             }
+        }
+    }
+
+    @ViewBuilder
+    private var emptyState: some View {
+        let term = viewModel.trimmedSearchTerm
+        if term.isEmpty {
+            MessageStateView(
+                systemImage: "tray",
+                title: "state.empty.title",
+                message: NSLocalizedString("state.empty.message", comment: ""),
+                retryAction: nil
+            )
+        } else {
+            MessageStateView(
+                systemImage: "magnifyingglass",
+                title: "search.empty.title",
+                message: String(format: NSLocalizedString("search.empty.message", comment: ""), term),
+                retryAction: nil
+            )
         }
     }
 }

@@ -17,7 +17,7 @@ struct ListingRow: View {
                 Text(listing.title)
                     .font(.headline)
                 Text(listing.price.formatted(.currency(code: "EUR")))
-                    .font(.subheadline.bold())
+					.font(.subheadline.bold()).foregroundColor(.blue)
                 if listing.isUrgent {
                     UrgentBadge()
                 }
