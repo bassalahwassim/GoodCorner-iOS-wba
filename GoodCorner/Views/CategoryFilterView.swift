@@ -16,7 +16,7 @@ struct CategoryFilterView: View {
                     }
                 }
             }
-            .padding(.horizontal)
+            .padding(.horizontal, 16)
             .padding(.vertical, 8)
         }
     }
@@ -24,13 +24,19 @@ struct CategoryFilterView: View {
     private func chip(_ label: Text, isSelected: Bool, action: @escaping () -> Void) -> some View {
         Button(action: action) {
             label
-                .font(.subheadline)
-                .padding(.horizontal, 12)
-                .padding(.vertical, 6)
-                .background(Capsule().fill(isSelected ? Color.accentColor : Color(.secondarySystemBackground)))
+                .font(.subheadline.weight(.semibold))
+                .padding(.horizontal, 14)
+                .padding(.vertical, 8)
                 .foregroundColor(isSelected ? .white : .primary)
+                .background(
+                    Capsule().fill(isSelected ? Color.brandStrong : Color(.secondarySystemGroupedBackground))
+                )
+                .overlay(
+                    Capsule().stroke(isSelected ? Color.clear : Color(.separator), lineWidth: 1)
+                )
         }
         .buttonStyle(.plain)
+        .animation(.easeInOut(duration: 0.15), value: isSelected)
         .accessibilityAddTraits(isSelected ? .isSelected : [])
     }
 }

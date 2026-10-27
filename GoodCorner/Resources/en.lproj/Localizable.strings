@@ -8,6 +8,7 @@
 "state.empty.message" = "There are no listings to show.";
 "badge.urgent" = "Urgent";
 "detail.title" = "Details";
+"detail.published.on" = "Published on %@";
 "detail.category" = "Category";
 "detail.published" = "Published";
 "detail.description" = "Description";

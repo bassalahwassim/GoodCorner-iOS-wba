@@ -44,6 +44,7 @@
 		FBDF94A13090F7DD00CD65CD /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDF949F3090F7DD00CD65CD /* RootView.swift */; };
 		FBDF94A43091563D00CD65CD /* APIClientSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDF94A23091563D00CD65CD /* APIClientSearchTests.swift */; };
 		FBDF94A53091563D00CD65CD /* ListingSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDF94A33091563D00CD65CD /* ListingSearchTests.swift */; };
+		FBDF94A7309162C400CD65CD /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDF94A6309162C400CD65CD /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		FBDF949F3090F7DD00CD65CD /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		FBDF94A23091563D00CD65CD /* APIClientSearchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClientSearchTests.swift; sourceTree = "<group>"; };
 		FBDF94A33091563D00CD65CD /* ListingSearchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingSearchTests.swift; sourceTree = "<group>"; };
+		FBDF94A6309162C400CD65CD /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +226,7 @@
 		FBDF94533090AD4100CD65CD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FBDF94A6309162C400CD65CD /* Theme.swift */,
 				FBDF949F3090F7DD00CD65CD /* RootView.swift */,
 				FBDF949E3090F7DD00CD65CD /* SplashView.swift */,
 				FBDF94933090DA5300CD65CD /* ListingsView.swift */,
@@ -426,6 +429,7 @@
 				FBDF949D3090F0AD00CD65CD /* ImageProcessor.swift in Sources */,
 				FBDF946B3090AD4100CD65CD /* APIError.swift in Sources */,
 				FBDF94943090DA5300CD65CD /* ListingsView.swift in Sources */,
+				FBDF94A7309162C400CD65CD /* Theme.swift in Sources */,
 				FBAD10AC3090A4C30078DCBD /* Good_Corner.xcdatamodeld in Sources */,
 				FBDF946C3090AD4100CD65CD /* APIClient.swift in Sources */,
 				FBDF94663090AD4100CD65CD /* ListingDetailView.swift in Sources */,

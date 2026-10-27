@@ -99,23 +99,30 @@ struct ListingsView: View {
                         emptyState
                     }
                 } else {
-                    List(viewModel.filteredListings) { listing in
-                        NavigationLink {
-                            ListingDetailView(
-                                listing: listing,
-                                categoryName: viewModel.categoryName(for: listing.categoryID)
-                            )
-                        } label: {
-                            ListingRow(
-                                listing: listing,
-                                categoryName: viewModel.categoryName(for: listing.categoryID)
-                            )
-                        }
-                    }
-                    .listStyle(.plain)
-                    .refreshable { await viewModel.load() }
+					ScrollView {
+						LazyVStack(spacing: 12) {
+							ForEach(viewModel.filteredListings) { listing in
+								NavigationLink {
+									ListingDetailView(
+										listing: listing,
+										categoryName: viewModel.categoryName(for: listing.categoryID)
+									)
+								} label: {
+									ListingRow(
+										listing: listing,
+										categoryName: viewModel.categoryName(for: listing.categoryID)
+									)
+								}
+								.buttonStyle(.plain)
+							}
+						}
+						.padding(.horizontal, 16)
+						.padding(.vertical, 8)
+						.animation(.default, value: viewModel.filteredListings)
+					}
+					.refreshable { await viewModel.load() }
                 }
-            }
+            }.background(Color(.systemGroupedBackground))
         }
     }
 
