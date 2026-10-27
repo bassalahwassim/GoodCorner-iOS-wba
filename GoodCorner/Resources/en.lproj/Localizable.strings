@@ -35,3 +35,7 @@
 "draft.photo.remove" = "Remove photo";
 "draft.photo.preview" = "Selected photo";
 "draft.photo.error" = "This photo could not be loaded.";
+"search.prompt" = "Search listings";
+"search.loading" = "Searching…";
+"search.empty.title" = "No results";
+"search.empty.message" = "No listing matches “%@”.";

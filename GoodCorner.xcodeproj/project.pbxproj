@@ -42,6 +42,8 @@
 		FBDF949D3090F0AD00CD65CD /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDF949C3090F0AD00CD65CD /* ImageProcessor.swift */; };
 		FBDF94A03090F7DD00CD65CD /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDF949E3090F7DD00CD65CD /* SplashView.swift */; };
 		FBDF94A13090F7DD00CD65CD /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDF949F3090F7DD00CD65CD /* RootView.swift */; };
+		FBDF94A43091563D00CD65CD /* APIClientSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDF94A23091563D00CD65CD /* APIClientSearchTests.swift */; };
+		FBDF94A53091563D00CD65CD /* ListingSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDF94A33091563D00CD65CD /* ListingSearchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,8 @@
 		FBDF949C3090F0AD00CD65CD /* ImageProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
 		FBDF949E3090F7DD00CD65CD /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		FBDF949F3090F7DD00CD65CD /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		FBDF94A23091563D00CD65CD /* APIClientSearchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClientSearchTests.swift; sourceTree = "<group>"; };
+		FBDF94A33091563D00CD65CD /* ListingSearchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingSearchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +183,8 @@
 		FBAD10B43090A4C40078DCBD /* GoodCornerTests */ = {
 			isa = PBXGroup;
 			children = (
+				FBDF94A23091563D00CD65CD /* APIClientSearchTests.swift */,
+				FBDF94A33091563D00CD65CD /* ListingSearchTests.swift */,
 				FBDF94973090F05200CD65CD /* DraftPhotoTests.swift */,
 				FBDF94903090D96900CD65CD /* CoreDataDraftStoreTests.swift */,
 				FBDF948F3090D96900CD65CD /* DraftViewModelTests.swift */,
@@ -443,11 +449,13 @@
 			files = (
 				FBDF94803090B78B00CD65CD /* APIClientTests.swift in Sources */,
 				FBDF94813090B79700CD65CD /* TestSupport.swift in Sources */,
+				FBDF94A53091563D00CD65CD /* ListingSearchTests.swift in Sources */,
 				FBDF94923090D96900CD65CD /* CoreDataDraftStoreTests.swift in Sources */,
 				FBDF947F3090B78700CD65CD /* DecodingTests.swift in Sources */,
 				FBDF94983090F05200CD65CD /* DraftPhotoTests.swift in Sources */,
 				FBDF94913090D96900CD65CD /* DraftViewModelTests.swift in Sources */,
 				FBDF947E3090B77D00CD65CD /* ListingsViewModelTests.swift in Sources */,
+				FBDF94A43091563D00CD65CD /* APIClientSearchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

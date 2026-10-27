@@ -35,3 +35,7 @@
 "draft.photo.remove" = "Supprimer la photo";
 "draft.photo.preview" = "Photo sélectionnée";
 "draft.photo.error" = "Impossible de charger cette photo.";
+"search.prompt" = "Rechercher une annonce";
+"search.loading" = "Recherche en cours…";
+"search.empty.title" = "Aucun résultat";
+"search.empty.message" = "Aucune annonce ne correspond à « %@ ».";
