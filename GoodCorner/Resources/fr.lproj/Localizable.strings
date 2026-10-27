@@ -8,6 +8,7 @@
 "state.empty.message" = "Il n'y a aucune annonce à afficher.";
 "badge.urgent" = "Urgent";
 "detail.title" = "Détail";
+"detail.published.on" = "Publiée le %@";
 "detail.category" = "Catégorie";
 "detail.published" = "Publiée le";
 "detail.description" = "Description";

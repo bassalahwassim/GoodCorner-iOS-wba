@@ -4,56 +4,76 @@ struct ListingDetailView: View {
     let listing: Listing
     let categoryName: String
 
+    private var priceText: String {
+        listing.price.formatted(.currency(code: "EUR"))
+    }
+
+    private var publishedText: String {
+        String(
+            format: NSLocalizedString("detail.published.on", comment: ""),
+            listing.creationDate.formatted(date: .long, time: .omitted)
+        )
+    }
+
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 12) {
-                ListingImageView(url: AppConfig.absoluteURL(for: listing.imagesURL?.thumb))
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 280)
-                    .clipped()
-                    .accessibilityElement(children: .ignore)
-                    .accessibilityLabel(Text(listing.title))
-                    .accessibilityAddTraits(.isImage)
+            VStack(alignment: .leading, spacing: 16) {
+                // Image entière (fit) sur fond neutre : plus de recadrage ni de zoom flou.
+                ListingImageView(
+                    url: AppConfig.absoluteURL(for: listing.imagesURL?.small),
+                    contentMode: .fit
+                )
+                .frame(maxWidth: .infinity)
+                .frame(height: 320)
+                .background(Color(.secondarySystemGroupedBackground))
+                .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel(Text(listing.title))
+                .accessibilityAddTraits(.isImage)
 
-                Text(listing.title)
-                    .font(.title2.bold())
-                Text(listing.price.formatted(.currency(code: "EUR")))
-					.font(.title3.bold()).foregroundColor(Color.blue)
-                if listing.isUrgent {
-                    UrgentBadge()
+                VStack(alignment: .leading, spacing: 12) {
+                    ViewThatFits(in: .horizontal) {
+                        HStack(spacing: 8) { tags }
+                        VStack(alignment: .leading, spacing: 6) { tags }
+                    }
+                    Text(listing.title)
+                        .font(.title2.bold())
+                    Text(priceText)
+                        .font(.system(.largeTitle, design: .rounded).weight(.heavy))
+                        .foregroundColor(.brandText)
+                    Label(publishedText, systemImage: "calendar")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
                 }
 
-                InfoRow(title: "detail.category", value: categoryName)
-                InfoRow(
-                    title: "detail.published",
-                    value: listing.creationDate.formatted(date: .long, time: .shortened)
-                )
-
-                Text("detail.description")
-                    .font(.headline)
-                    .padding(.top, 8)
-                Text(listing.description)
-                    .font(.body)
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("detail.description")
+                        .font(.headline)
+                    Text(listing.description)
+                        .font(.body)
+                        .textSelection(.enabled)
+                }
+                .padding(16)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .card()
             }
-            .padding()
+            .padding(16)
         }
+        .background(Color(.systemGroupedBackground))
         .navigationTitle("detail.title")
         .navigationBarTitleDisplayMode(.inline)
-    }
-}
-
-private struct InfoRow: View {
-    let title: LocalizedStringKey
-    let value: String
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 2) {
-            Text(title)
-                .font(.caption)
-                .foregroundColor(.secondary)
-            Text(value)
-                .font(.body)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                ShareLink(item: "\(listing.title) – \(priceText)")
+            }
         }
-        .accessibilityElement(children: .combine)
+    }
+
+    @ViewBuilder
+    private var tags: some View {
+        CategoryTag(name: categoryName)
+        if listing.isUrgent {
+            UrgentBadge()
+        }
     }
 }

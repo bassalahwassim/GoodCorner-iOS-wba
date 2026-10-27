@@ -17,6 +17,6 @@ struct RootView: View {
                 ListingsView()
                     .transition(.opacity)
             }
-        }
+        }.tint(.brandStrong)
     }
 }
