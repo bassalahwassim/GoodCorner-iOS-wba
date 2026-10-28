@@ -18,6 +18,12 @@ struct DraftFormView: View {
                     TextField("draft.field.title", text: $viewModel.draft.title)
                     TextField("draft.field.price", text: $viewModel.draft.priceText)
                         .keyboardType(.decimalPad)
+						.onChange(of: viewModel.draft.priceText) { newValue in
+							let cleaned = PriceInput.sanitize(newValue)
+							if cleaned != newValue {
+								viewModel.draft.priceText = cleaned
+							}
+						}
                     Picker("draft.field.category", selection: $viewModel.draft.categoryID) {
                         Text("draft.field.none").tag(Int?.none)
                         ForEach(categories) { category in

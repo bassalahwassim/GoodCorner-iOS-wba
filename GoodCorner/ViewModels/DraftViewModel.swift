@@ -11,9 +11,11 @@ final class DraftViewModel: ObservableObject {
 
     init(store: DraftStore, autosaveDelay: DispatchQueue.SchedulerTimeType.Stride = .milliseconds(500)) {
         self.store = store
-        let restored = try? store.load()   // ListingDraft? (try? aplatit l'optionnel)
-        self.draft = restored ?? ListingDraft()
-        self.hasSavedDraft = restored != nil
+		let restored = try? store.load()
+		var initial = restored ?? ListingDraft()
+		initial.priceText = PriceInput.sanitize(initial.priceText)
+		self.draft = initial
+		self.hasSavedDraft = restored != nil
 
         // Sauvegarde automatique, avec debounce pour ne pas écrire à chaque frappe.
         $draft

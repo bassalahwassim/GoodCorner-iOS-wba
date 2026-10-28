@@ -1,6 +1,6 @@
 import XCTest
 import UIKit
-@testable import goodCorner
+@testable import GoodCorner
 
 private final class PhotoFakeStore: DraftStore {
     var stored: ListingDraft?

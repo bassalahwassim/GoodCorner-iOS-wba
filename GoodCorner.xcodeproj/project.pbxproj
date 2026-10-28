@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		FBAD10A43090A4C30078DCBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBAD10A33090A4C30078DCBD /* Assets.xcassets */; };
 		FBAD10A73090A4C30078DCBD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBAD10A63090A4C30078DCBD /* Preview Assets.xcassets */; };
-		FBAD10AC3090A4C30078DCBD /* Good_Corner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBAD10AA3090A4C30078DCBD /* Good_Corner.xcdatamodeld */; };
 		FBAD10C03090A4C40078DCBD /* Good_CornerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD10BF3090A4C40078DCBD /* Good_CornerUITests.swift */; };
 		FBAD10C23090A4C40078DCBD /* Good_CornerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD10C13090A4C40078DCBD /* Good_CornerUITestsLaunchTests.swift */; };
+		FBD717363091F41C004600D4 /* PriceInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD717353091F41C004600D4 /* PriceInput.swift */; };
 		FBDF94633090AD4100CD65CD /* goodCornerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDF944E3090AD4100CD65CD /* goodCornerApp.swift */; };
 		FBDF94643090AD4100CD65CD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FBDF94503090AD4100CD65CD /* Localizable.strings */; };
 		FBDF94653090AD4100CD65CD /* CategoryFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDF94543090AD4100CD65CD /* CategoryFilterView.swift */; };
@@ -68,12 +68,12 @@
 		FBAD109C3090A4C10078DCBD /* GoodCorner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodCorner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBAD10A33090A4C30078DCBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBAD10A63090A4C30078DCBD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		FBAD10AB3090A4C30078DCBD /* Good_Corner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Good_Corner.xcdatamodel; sourceTree = "<group>"; };
 		FBAD10B13090A4C40078DCBD /* GoodCornerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoodCornerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBAD10BB3090A4C40078DCBD /* GoodCornerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoodCornerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBAD10BF3090A4C40078DCBD /* Good_CornerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Good_CornerUITests.swift; sourceTree = "<group>"; };
 		FBAD10C13090A4C40078DCBD /* Good_CornerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Good_CornerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FBAD10CE3090A56C0078DCBD /* Good-Corner-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Good-Corner-Info.plist"; sourceTree = SOURCE_ROOT; };
+		FBD717353091F41C004600D4 /* PriceInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceInput.swift; sourceTree = "<group>"; };
 		FBDF944E3090AD4100CD65CD /* goodCornerApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = goodCornerApp.swift; sourceTree = "<group>"; };
 		FBDF94513090AD4100CD65CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FBDF94523090AD4100CD65CD /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -168,7 +168,6 @@
 				FBDF94533090AD4100CD65CD /* Views */,
 				FBAD10CE3090A56C0078DCBD /* Good-Corner-Info.plist */,
 				FBAD10A33090A4C30078DCBD /* Assets.xcassets */,
-				FBAD10AA3090A4C30078DCBD /* Good_Corner.xcdatamodeld */,
 				FBAD10A53090A4C30078DCBD /* Preview Content */,
 			);
 			path = GoodCorner;
@@ -226,16 +225,16 @@
 		FBDF94533090AD4100CD65CD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FBDF94A6309162C400CD65CD /* Theme.swift */,
 				FBDF949F3090F7DD00CD65CD /* RootView.swift */,
 				FBDF949E3090F7DD00CD65CD /* SplashView.swift */,
 				FBDF94933090DA5300CD65CD /* ListingsView.swift */,
-				FBDF94823090D7AB00CD65CD /* DraftFormView.swift */,
+				FBDF94563090AD4100CD65CD /* ListingRow.swift */,
+				FBDF94583090AD4100CD65CD /* ListingImageView.swift */,
 				FBDF94543090AD4100CD65CD /* CategoryFilterView.swift */,
 				FBDF94553090AD4100CD65CD /* ListingDetailView.swift */,
-				FBDF94563090AD4100CD65CD /* ListingRow.swift */,
+				FBDF94823090D7AB00CD65CD /* DraftFormView.swift */,
 				FBDF94573090AD4100CD65CD /* MessageStateView.swift */,
-				FBDF94583090AD4100CD65CD /* ListingImageView.swift */,
+				FBDF94A6309162C400CD65CD /* Theme.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -256,6 +255,7 @@
 				FBDF94993090F07100CD65CD /* ListingDraft.swift */,
 				FBDF945F3090AD4100CD65CD /* ListingCategory.swift */,
 				FBDF94603090AD4100CD65CD /* Listing.swift */,
+				FBD717353091F41C004600D4 /* PriceInput.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -430,7 +430,6 @@
 				FBDF946B3090AD4100CD65CD /* APIError.swift in Sources */,
 				FBDF94943090DA5300CD65CD /* ListingsView.swift in Sources */,
 				FBDF94A7309162C400CD65CD /* Theme.swift in Sources */,
-				FBAD10AC3090A4C30078DCBD /* Good_Corner.xcdatamodeld in Sources */,
 				FBDF946C3090AD4100CD65CD /* APIClient.swift in Sources */,
 				FBDF94663090AD4100CD65CD /* ListingDetailView.swift in Sources */,
 				FBDF94653090AD4100CD65CD /* CategoryFilterView.swift in Sources */,
@@ -443,6 +442,7 @@
 				FBDF948E3090D81800CD65CD /* PersistenceController.swift in Sources */,
 				FBDF946E3090AD4100CD65CD /* ListingCategory.swift in Sources */,
 				FBDF94843090D7AB00CD65CD /* DraftFormView.swift in Sources */,
+				FBD717363091F41C004600D4 /* PriceInput.swift in Sources */,
 				FBDF94673090AD4100CD65CD /* ListingRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -686,12 +686,12 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.wba.ios.Good-CornerTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wba.ios.GoodCornerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Good Corner.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Good Corner";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoodCorner.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GoodCorner";
 			};
 			name = Debug;
 		};
@@ -705,12 +705,12 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.wba.ios.Good-CornerTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wba.ios.GoodCornerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Good Corner.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Good Corner";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoodCorner.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GoodCorner";
 			};
 			name = Release;
 		};
@@ -722,7 +722,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.wba.ios.Good-CornerUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wba.ios.GoodCornerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -739,7 +739,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.wba.ios.Good-CornerUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wba.ios.GoodCornerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -788,19 +788,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		FBAD10AA3090A4C30078DCBD /* Good_Corner.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				FBAD10AB3090A4C30078DCBD /* Good_Corner.xcdatamodel */,
-			);
-			currentVersion = FBAD10AB3090A4C30078DCBD /* Good_Corner.xcdatamodel */;
-			path = Good_Corner.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = FBAD10943090A4C10078DCBD /* Project object */;
 }

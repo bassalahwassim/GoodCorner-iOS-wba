@@ -47,7 +47,7 @@ struct APIClient: ListingsService {
 
     func fetchListings(query: String?) async throws -> [Listing] {
 		
-		try await Task.sleep(nanoseconds: 2_000_000_000) // 2 secondes TODO  (remove)
+		try await Task.sleep(nanoseconds: 1_000_000_000) // 1 seconde just for test TODO  (to remove )
 	
         // Attention : si page/limit sont utilisés un jour, ils doivent être fournis ensemble.
         var items: [URLQueryItem] = []

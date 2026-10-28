@@ -1,5 +1,5 @@
 import XCTest
-@testable import goodCorner
+@testable import GoodCorner
 
 private final class FakeDraftStore: DraftStore {
     var stored: ListingDraft?
