@@ -1,5 +1,5 @@
 import Foundation
-@testable import goodCorner
+@testable import GoodCorner
 
 extension Listing {
     static func stub(id: Int, categoryID: Int = 1, isUrgent: Bool = false) -> Listing {

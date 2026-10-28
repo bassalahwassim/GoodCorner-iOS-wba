@@ -1,6 +1,6 @@
 import XCTest
 import CoreData
-@testable import goodCorner
+@testable import GoodCorner
 
 final class CoreDataDraftStoreTests: XCTestCase {
     private func makeStore() -> (CoreDataDraftStore, PersistenceController) {

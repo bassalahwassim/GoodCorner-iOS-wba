@@ -1,5 +1,5 @@
 import XCTest
-@testable import goodCorner
+@testable import GoodCorner
 
 /// Intercepte les requêtes URLSession (aucun serveur nécessaire).
 private final class StubURLProtocol: URLProtocol {

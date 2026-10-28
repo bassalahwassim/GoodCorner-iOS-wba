@@ -1,5 +1,5 @@
 import XCTest
-@testable import goodCorner
+@testable import GoodCorner
 
 /// Petit journal thread-safe utilisé par les handlers de test.
 private final class Log {
