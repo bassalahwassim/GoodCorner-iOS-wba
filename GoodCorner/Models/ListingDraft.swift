@@ -7,6 +7,8 @@ struct ListingDraft: Equatable {
     var priceText = ""
     var categoryID: Int?
     var isUrgent = false
+    /// Photo choisie dans la photothèque (JPEG redimensionné).
+    var imageData: Data?
 
     /// Un brouillon "vide" n'est jamais persisté.
     var isEmpty: Bool {
@@ -14,6 +16,6 @@ struct ListingDraft: Equatable {
             && description.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
             && priceText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
             && categoryID == nil
-            && !isUrgent
+            && imageData == nil
     }
 }
